@@ -1,0 +1,124 @@
+{
+	"songs": [
+		{
+			"name": "演员",
+			"info": [1,2,3,4],
+			"time": "04:21",
+			"singer": "薛之谦",
+			"lang": "华语",
+			"album": "",
+			"url": "http://fs.web.kugou.com/35ed1aff3fd54314e2a3f165191d4349/589b35d2/G018/M00/0A/04/Ug0DAFVw-LCAYoUkAD_FoLiLEPc990.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20150605/20150605091116796204.jpg"
+		},
+		{
+			"name": "刚刚好",
+			"info": [2],
+			"time": "04:21",
+			"singer": "薛之谦",
+			"lang": "华语",
+			"album": "刚刚好",
+			"url": "http://fs.web.kugou.com/65f10a2098032299f49b76f13aadb4fa/589b3ae9/G075/M0A/16/09/K5QEAFdVovWAFZegAD0riCa_Rgo648.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20160607/20160607175253237450.jpg"
+		},
+		{
+			"name": "你还要我怎样",
+			"info": [3],
+			"time": "05:10",
+			"singer": "薛之谦",
+			"lang": "华语",
+			"album": "意外",
+			"url": "http://fs.web.kugou.com/65f10a2098032299fhttp://fs.web.kugou.com/cb0e0c05fb663407330d7d26c7dc65f7/589b4190/G014/M01/0D/13/roYBAFUJf-aAAH3yAEvEgNLBpE0455.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20150715/20150715184807521489.jpg"
+		},
+		{
+			"name": "有种离开叫舍不得",
+			"info": [4],
+			"time": "04:09",
+			"singer": "庄心妍",
+			"lang": "华语",
+			"album": "Touch Of Love",
+			"url": "http://fs.web.kugou.com/795fe0e55a0e23815e291f65916d949b/589b3ff2/G083/M09/0E/05/kw0DAFgtUByARzqVADzXKygLq8s631.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20160915/20160915122822300491.jpg"
+		},
+		{
+			"name": "有种离开叫舍不得",
+			"info": [1,4],
+			"time": "04:28",
+			"singer": "庄心妍",
+			"lang": "华语",
+			"album": "精心妍选2无可取代",
+			"url": "http://fs.web.kugou.com/537c5aae33411b808bf96330a5d5d06b/589b3962/G048/M00/16/00/0IYBAFYbtRuAU5GcAEGJoc-AAMk803.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20161008/20161008190641838638.jpg"
+		},
+		{
+			"name": "告白气球",
+			"info": [1,2],
+			"time": "4:21",
+			"singer": "周杰伦",
+			"lang": "华语",
+			"album": "刚刚好",
+			"url": "http://fs.web.kugou.com/9a55577f23a523a6127326d88c8c8027/589b435b/G059/M02/17/1D/ew0DAFdr9KmAf5GnADSkTnjFCm0437.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20160607/20160607175253237450.jpg"
+		},
+		{
+			"name": "晴天",
+			"info": [2,3,4],
+			"time": "04:30",
+			"singer": "周杰伦",
+			"lang": "华语",
+			"album": "叶惠美",
+			"url": "http://fs.web.kugou.com/30fe549abf1e64ce220bea1f7c63bdd7/589b3e7a/G017/M04/0B/17/sYYBAFUxo5aAUFhTAEMOIKThsHo304.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20150720/20150720192701255833.jpg"
+		},
+		{
+			"name": "十年",
+			"info": [2,3],
+			"time": "04:30",
+			"singer": "陈奕迅",
+			"lang": "华语",
+			"album": "EASON CHAN MANDARIN COLLECTION",
+			"url": "http://fs.web.kugou.com/9fd5df18e8bde8114a7fc2af7c28806a/589b40ef/G002/M07/14/10/Qg0DAFT6DmGAJqCtADF7RhFK-Y4119.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20130522/20130522130330440154.jpg"
+		},
+		{
+			"name": "陪你度过漫长岁月",
+			"info": [1,2,3,4],
+			"time": "04:02",
+			"singer": "陈奕迅",
+			"lang": "华语",
+			"album": "陪安东尼度过漫长岁月",
+			"url": "http://fs.web.kugou.com/29a7e50c9379fc0088024439a2a085e6/589b460c/G043/M06/0E/15/y4YBAFYdrjWAfIb8ADsrbe-SsVE292.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20151011/20151011230246355111.jpg"
+		},
+		{
+			"name": "海阔天空",
+			"info": [1],
+			"time": "04:02",
+			"singer": "Beyond",
+			"lang": "华语",
+			"album": "华纳至尊金曲",
+			"url": "http://fs.web.kugou.com/cd030f3c50030279605979f11395758a/589b42af/G006/M00/1B/05/poYBAFT91L6ADftbAE8gwA0espI876.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20160908/20160908234916149598.jpg"
+		},
+		{
+			"name": "情人",
+			"info": [2,3],
+			"time": "05:16",
+			"singer": "Beyond",
+			"lang": "华语",
+			"album": "组·Band岁月",
+			"url": "http://fs.web.kugou.com/ea71aa6ce6add6a67c9578c3de062739/58a04912/G004/M07/1B/10/pIYBAFT9tyyAYW0BAE01hlDZB5g037.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20151218/20151218175807915184.jpg"
+		},
+		{
+			"name": "光年之外",
+			"info": [2,3],
+			"time": "03:55",
+			"singer": "G.E.M. 邓紫棋",
+			"lang": "华语",
+			"album": "组·Band岁月",
+			"url": "http://fs.web.kugou.com/dad3697f93f3f5e6412e89c10d691631/589b4651/G083/M08/00/04/84YBAFhks0aAYGsBADl8RUL2DXQ825.mp3",
+			"pic": "http://imge.kugou.com/stdmusic/20161229/20161229233400375274.jpg"
+		}
+	]
+}

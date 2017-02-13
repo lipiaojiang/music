@@ -1,0 +1,27 @@
+{
+	"rank": {
+		"title": "热门榜单",
+		"ranklist": [
+			{
+				"title": "酷音乐流行风向标",
+				"info":"1",
+				"icon":"http://www.kugou.com/yy/static/images/ku.png"
+			},
+			{
+				"title": "酷狗飙升榜",
+				"info":"2",
+				"icon":"http://imge.kugou.com/temppic/20130807/20130807185439172736.png"
+			},
+			{
+				"title": "酷狗TOP500",
+				"info":"3",
+				"icon":"http://imge.kugou.com/temppic/20130807/20130807185450567609.png"
+			},
+			{
+				"title": "热歌榜",
+				"info":"4",
+				"icon":"http://imge.kugou.com/stdmusic/20160119/20160119110054378246.jpg"
+			}
+		]
+	}
+}

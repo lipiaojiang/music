@@ -1,0 +1,19 @@
+{
+	"album": {
+		"name": "陪安东尼度过漫长岁月",
+		"info": "1",
+		"singer": "陈奕迅",
+		"date": "2015-10-14",
+		"avatar": "http://imge.kugou.com/stdmusic/150/20151013/20151013210141555633.jpg",
+		"songs": [
+			{
+				"name": "陪你度过漫长岁月",
+				"time": "04:02",
+				"singer": "陈奕迅",
+				"lang": "华语",
+				"url": "http://fs.web.kugou.com/29a7e50c9379fc0088024439a2a085e6/589b460c/G043/M06/0E/15/y4YBAFYdrjWAfIb8ADsrbe-SsVE292.mp3",
+				"pic": "http://imge.kugou.com/stdmusic/20151011/20151011230246355111.jpg"
+			}
+		]
+	}
+}

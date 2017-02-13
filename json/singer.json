@@ -1,0 +1,52 @@
+{
+	"singer": [
+		{
+			"name": "薛之谦",
+			"info": "1",
+			"sex": "男",
+			"lang": "华语",
+			"first": "X",
+			"avatar": "http://singerimg.kugou.com/uploadpic/pass/softhead/100/20161121/20161121115938576.jpg"
+		},
+		{
+			"name": "庄心妍",
+			"info": "2",
+			"sex": "女",
+			"lang": "华语",
+			"first": "Z",
+			"avatar": "http://singerimg.kugou.com/uploadpic/pass/softhead/100/20161012/20161012161017418.jpg"
+		},
+		{
+			"name": "周杰伦",
+			"info": "3",
+			"sex": "男",
+			"lang": "华语",
+			"first": "Z",
+			"avatar": "http://singerimg.kugou.com/uploadpic/pass/softhead/100/20170119/20170119105146606.jpg"
+		},
+		{
+			"name": "陈奕迅",
+			"info": "4",
+			"sex": "男",
+			"lang": "华语",
+			"first": "C",
+			"avatar": "http://singerimg.kugou.com/uploadpic/pass/softhead/100/20160923/20160923162150990653.jpg"
+		},
+		{
+			"name": "Beyond",
+			"info": "5",
+			"sex": "乐队组合",
+			"lang": "华语",
+			"first": "B",
+			"avatar": "http://singerimg.kugou.com/uploadpic/pass/softhead/100/20160418/20160418100531196.jpg"
+		},
+		{
+			"name": "G.E.M.邓紫棋",
+			"info": "6",
+			"sex": "女",
+			"lang": "华语",
+			"first": "G",
+			"avatar": "http://singerimg.kugou.com/uploadpic/pass/softhead/100/20161206/20161206150644553.jpg"
+		}
+	]
+}
