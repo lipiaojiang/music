@@ -2,10 +2,10 @@
 	<div class="player">
 		<div class="ctr">
 			<div class="pic" :class="{'ani':playFlag}"></div>
-			<span class="last iconfont icon-bofangqishangyiqu"></span>
+			<span class="last iconfont icon-bofangqishangyiqu" @click.stop="_last"></span>
 			<span class="play iconfont icon-bofang" v-show="!playFlag" @click.stop="_play"></span>
 			<span class="pause iconfont icon-bofangqizanting-copy" v-show="playFlag" @click.stop="_pause"></span>
-			<span class="next iconfont icon-bofangqixiayiqu"></span>
+			<span class="next iconfont icon-bofangqixiayiqu" @click.stop="_nextSong"></span>
 			<span class="like iconfont icon-xihuan" :class="{'active': likeFlag}" @click.stop="_like"></span>
 			<span class="order iconfont icon-caidan01" v-show="orderFlag === 0" @click.stop="_orderChange"></span>
 			<span class="order iconfont icon-xunhuan" v-show="orderFlag === 1" @click.stop="_orderChange"></span>
@@ -20,14 +20,18 @@
 				<div class="title">播放列表</div>
 				<div class="content">
 					<ul>
-						<li v-for="(song, index) in songsList">
-							<span class="name">{{ song.name }}</span>
+						<li v-for="(song, index) in songsList" :class="[{'active':index%2===0},{'selectActive':selectActive===index},{'playing':playedShow === index}]" @click.stop="select(index)">
+							<span class="no">{{ index+1 }}.</span>
+							<span class="name" :title="song.name">{{ song.name}}</span>
+			        <span class="play iconfont icon-bofang" v-show="isPlay === index" @click.stop="_played(index)"></span>
+							<span class="time">{{ song.time }}</span>
+							<span class="singer">{{ song.singer }}</span>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</transition>
-		<audio id="audio" :src="played.url" autoplay  :loop="orderFlag===2"></audio>
+		<audio id="audio" :src="played.url" autoplay  :loop="orderFlag===2" @ended="_ended" @error="_ended"></audio>
 	</div>
 </template>
 <script>
@@ -48,22 +52,33 @@
 	        album: "",
 	        url: "",
 	        pic: ""
-				}
+				},
+				selectActive: null,
+        isPlay: false
 			}
 		},
 		computed: {
+			// 获取选择播放歌曲的数据
 			songsList () {
 				return this.$store.state.selectSongs
+			},
+			// 播放列表显示当前播放的歌曲
+			playedShow () {
+				return this.songsList.indexOf(this.played)
 			}
 		},
 		watch: {
-			'songsList': '_played'
+			songsList () {
+				this._played(0)
+			}
 		},
 		methods: {
 			// 播放
 			_play () {
-				this.playFlag = true
-				document.getElementById('audio').play()
+				if( this.songsList.length>0){
+					this.playFlag = true
+					document.getElementById('audio').play()
+				}
 			},
 			// 暂停
 			_pause () {
@@ -91,14 +106,67 @@
 				}
 			},
 			// 设置当前播放歌曲
-			_played () {
-				this.played = this.songsList[this.songsList.length-1]
+			_played (index) {
+				this.played = this.songsList[index]
 				this.playFlag = true
+			},
+			// 下一曲
+			_nextSong () {
+				if (this.songsList.length === 0) {
+					return
+				}
+				let index = this.songsList.indexOf(this.played)
+				let maxLength = this.songsList.length - 1
+				if (index < maxLength) {
+					index++
+				} else if (this.orderFlag !== 0) {
+					index = 0
+				} else {
+					this._pause()
+					return
+				}
+				// 返回随机索引
+				if (this.orderFlag === 3) {
+					index = parseInt(Math.random() * maxLength)
+				}
+				this._played(index)
+			},
+			// 上一曲
+			_last () {
+				if (this.songsList.length === 0) {
+					return
+				}
+				let index = this.songsList.indexOf(this.played)
+				let maxLength = this.songsList.length - 1
+				if (index > 0) {
+					index--
+				} else if (this.orderFlag !== 0) {
+					index = maxLength
+				} else {
+					this._pause()
+					return
+				}
+				// 返回随机索引
+				if (this.orderFlag === 3) {
+					index = parseInt(Math.random() * maxLength)
+				}
+				this._played(index)
+			},
+			// 当前曲目结束
+			_ended () {
+				if (this.orderFlag === 2) {
+					return
+				}
+				this._nextSong()
 			},
 			// 展开播放列表
 			_listShow () {
 				this.listFlag = !this.listFlag
-			}
+			},
+			select (i) {
+        this.selectActive = i
+        this.isPlay = i
+      }
 		}
 	}
 </script>
@@ -182,6 +250,55 @@
 				width: 100%
 				height: calc(100% - 33px)
 				overflow-x: hidden 
+				ul li
+		      display: flex 
+		      height: 36px
+		      margin: 4px 12px
+		      line-height: 36px 
+			  .active
+			    background-color: rgba(220, 220, 220, .2)
+			  .selectActive
+		      background-color: rgba(220, 220, 220, .4)
+		      animation-name: selectAni
+		      animation-duration: .2s
+		      animation-iteration-count: 1
+		      animation-timing-function: linear
+		      -webkit-animation-name: selectAni
+		      -webkit-animation-duration: .2s
+		      -webkit-animation-iteration-count: 1
+		      -webkit-animation-timing-function: linear  
+			  .time,.singer,.no
+			  	flex: 0 0 auto
+			  	margin: 0 4px
+			  .name
+		      flex: 1 1 auto
+		      overflow: hidden
+		      text-overflow: ellipsis
+		      white-space: nowrap    
+		    .play
+		      flex: 0 0 36px
+		      width: 36px
+		      margin-right: 36px
+		      color: #999
+		      text-align: center
+		   	.playing
+			  	color: #f00
+			  	.play
+			  		color: #f00
+	@keyframes selectAni {
+	    0% {
+	      transform: scale(1)
+	      -webkit-transform: scale(1)
+	    }
+	    50% {
+	      transform: scale(0.98)
+	      -webkit-transform: scale(0.98)
+	    }
+	    100% {
+	      transform: scale(1)
+	      -webkit-transform: scale(1)
+	    }
+	  }     
 	@keyframes round {
 		0% {
 			transform: rotateZ(0deg)
