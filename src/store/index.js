@@ -12,16 +12,7 @@ const store = new Vuex.Store ({
       info: "",
       icon: ""
     },
-  	selectSongs: {
-      name: "",
-      info: [],
-      time: "",
-      singer: "",
-      lang: "",
-      album: "",
-      url: "",
-      pic: ""
-    }
+  	selectSongs: []
   },
   getters: {
   	navShow: state => state.navShow,
@@ -43,7 +34,7 @@ const store = new Vuex.Store ({
     },
     // 添加选择的歌曲
     addSelectSong (state, data) {
-      state.selectSong = {...(state.selectSong), ...data}
+      state.selectSongs.push(data)
     }
   },
   actions: {
