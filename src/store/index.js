@@ -34,6 +34,9 @@ const store = new Vuex.Store ({
     },
     // 添加选择的歌曲
     addSelectSong (state, data) {
+      if (state.selectSongs.indexOf(data) !== -1) {
+        return
+      } 
       state.selectSongs.unshift(data)
     }
   },
