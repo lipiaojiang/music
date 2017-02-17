@@ -38,6 +38,10 @@ const store = new Vuex.Store ({
         return
       } 
       state.selectSongs.unshift(data)
+    },
+    // 清空播放列表
+    emptySelectSong (state) {
+      state.selectSongs = []
     }
   },
   actions: {
