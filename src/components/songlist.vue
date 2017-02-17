@@ -29,8 +29,13 @@
     },
     methods: {
       select (i) {
-        this.selectActive = i
-        this.isPlay = i
+        if (i === this.selectActive) {
+          this.selectActive = null
+          this.isPlay = false
+        } else {
+          this.selectActive = i
+          this.isPlay = i
+        }
       },
       // 添加到播放列表
       _add (song) {
@@ -46,7 +51,7 @@
   	ul li
       display: flex 
       height: 36px
-      line-height: 36px 
+      line-height: 36px
 	  .active
 	    background-color: rgba(220, 220, 220, .2)
 	  .selectActive
